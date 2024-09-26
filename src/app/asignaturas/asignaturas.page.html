@@ -1,13 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>asignaturas</ion-title>
+    <ion-title>Asignaturas</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">asignaturas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-grid >
+
+    <ion-row>
+      <ion-col size="8">Asignatura</ion-col>
+      <ion-col size="4">Seccion</ion-col>
+    </ion-row>
+
+    <br><br>
+
+    <ion-row *ngFor="let asignatura of asignaturas">
+      <ion-col size="8">{{ asignatura.nombre }}</ion-col>
+      <ion-col size="4">{{ asignatura.seccion }}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>DuocUC</ion-title>
+  </ion-toolbar>
+</ion-footer>

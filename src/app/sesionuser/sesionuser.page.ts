@@ -31,12 +31,24 @@ async funcionIngresar()
     const alerta = await this.alertController.create (
       {
         header: "Credencial Incorrecta",
-        message: "Credencial ingresada incorrecta, verifique su Usuario y Contraseña.",
+        message: "Credencial ingresada incorrecta, verifique Usuario y Contraseña.",
         buttons: ['OK']
       }
     )
     await alerta.present();
   }
+}
+
+async funcionRecuperar()
+{
+  const alerta = await this.alertController.create (
+    {
+      header:"Recuperar su Contraseña",
+      message:"Se envio un mensaje a su correo para recuperar su contraseña",
+      buttons: ['Ok']
+    }
+  )
+  await alerta.present();
 }
 
 }

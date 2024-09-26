@@ -17,11 +17,21 @@
       <ion-input type="password" placeholder= "*******" label="Ingrese Contraseña" labelPlacement="floating" color="dark" [(ngModel)]="password"></ion-input>
     </ion-item>
 
-    <ion-button (click)="funcionIngresar() " expand="block" fill="solid" shape="round" color="warning">
+    <ion-button (click)="funcionIngresar() " expand="block" fill="solid" shape="round" color="primary">
       Ingresar
     </ion-button></ion-col>
   
   </ion-row> 
+
+  <ion-row>
+
+    <ion-col>
+      <ion-button (click)="funcionRecuperar" expand="block" fill="clear" shape="round">
+        Recuperar tu Contraseña
+      </ion-button>
+    </ion-col>
+    
+  </ion-row>
 
 </ion-content>
 
